@@ -7,6 +7,7 @@ import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import { useFetchUser } from "lib/authContext";
 import Layout from "components/Layout/Layout";
+import { BatchBLogo } from "components/Images/svg/BatchB";
 
 export default function Landing() {
   const { user, loading } = useFetchUser();
@@ -31,10 +32,12 @@ export default function Landing() {
           <div className="container relative mx-auto">
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                <div className="pr-12">
-                  <h1 className="text-white font-semibold text-5xl">
-                    3rdspace Batch
-                  </h1>
+                <div className="pr-12 ">
+                  <div className="flex-row flex justify-items-center content-center place-content-center items-center self-center">
+                    <BatchBLogo w={150} />
+                    <h1 className="text-white font-semibold text-5xl">atch</h1>
+                  </div>
+
                   <p className="mt-4 text-lg text-blueGray-200">
                     This is a simple example of a Landing Page you can build
                     using Notus NextJS. It features multiple CSS components
